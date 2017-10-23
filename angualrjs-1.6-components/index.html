@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./app/app.js"></script>
+</head>
+
+<body ng-controller="MainController as ctrl">
+
+    <h2>Bindings</h2>
+    <p>
+        Two Way Bindings<br/>
+        <my-two-way-binding yyy="ctrl.xxx"></my-two-way-binding>
+
+        One Way Bindings<br/>
+        <my-one-way-binding yyy="ctrl.xxx"></my-one-way-binding>
+
+        Stuffs<br/>
+        <span>{{ctrl.xxx.msg}}</span>
+        <button ng-click="ctrl.randomize()">Randomize</button>
+    </p>
+
+    <hero-detail hero="ctrl.villain"></hero-detail>
+
+    <h2>Hello World From Component</h2>
+    {{msg}}<br/>
+    <my-hello-world></my-hello-world>
+
+</body>
+
+</html>

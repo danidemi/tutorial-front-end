@@ -24,25 +24,25 @@ var myApp = angular
 
         })
 
-    .directive('myDirective', function () {
-        return {
-            template: "<strong>mydirective</strong>"
-        }
-    })
-
-    .directive('myPhone', function () {
-        return {
-            restrict: 'E',
-            template: '<table border="1"><tr><td colspan="2">Phone details</td></tr><tr><td>{{phone.model}}</td><td>{{phone.ram}}</td></tr></table>',
-            scope: {
-                // 'key' attribute has to be used in the tag.
-                // It sould resolve to an object from controller's $scope to be
-                // associated to the 'phone' object that is private to the directive.
-                //
-                phone: '=key'
+        .directive('myDirective', function () {
+            return {
+                template: "<strong>mydirective</strong>"
             }
-        }
-    })
+        })
+
+        .directive('myPhone', function () {
+            return {
+                restrict: 'E',
+                template: '<table border="1"><tr><td colspan="2">Phone details</td></tr><tr><td>{{phone.model}}</td><td>{{phone.ram}}</td></tr></table>',
+                scope: {
+                    // 'key' attribute has to be used in the tag.
+                    // It sould resolve to an object from controller's $scope to be
+                    // associated to the 'phone' object that is private to the directive.
+                    //
+                    phone: '=key'
+                }
+            }
+        })
 
 
 ;
