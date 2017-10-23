@@ -8,8 +8,29 @@
 </head>
 
 <body>
+
+    <h2>Directive - Private scope</h2>
+
+    <div ng-controller="PhoneController">
+
+        * {{phones.nokia.model}}<br/>
+        * {{phones.xiaomi}}<br/>
+
+        1st phone
+        <my-phone key="phones.nokia"></my-phone>
+
+        2nd phone
+        <my-phone key="phones.xiaomi"></my-phone>
+
+    </div>
+
+    <h2>Directive - Example</h2>
+    <my-directive></my-directive>
+
+    <h2>Just the template language</h2>
     <p>Nothing here {{'yet' + '!'}}</p>
 
+    <h2>Controller</h2>
     <div ng-controller="FirstController">
         <h2>First Controller</h2>
         <ul>
@@ -18,6 +39,10 @@
             </li>
         </ul>
     </div>
+
+
+
+
 
 </body>
 
