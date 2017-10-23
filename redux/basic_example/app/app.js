@@ -1,14 +1,14 @@
 function myReducer(currentState, action){
 
 
-    if(currentState == undefined){
-        currentState = {
-            value: 0,
-            multiplier: 1
-        }
-    }
+    // if(currentState == undefined){
+    //     currentState = {
+    //         value: 0,
+    //         multiplier: 1
+    //     }
+    // }
 
-    if(action.type.startsWith("@@redux")) return;
+    //if(action.type.startsWith("@@redux") || currentState == undefined) return;
 
     switch(action.type) {
         case 'INCREMENT':
@@ -31,8 +31,8 @@ function myReducer(currentState, action){
                 value: currentState.value,
                 multiplier: currentState.multiplier * 0.1
             }
-        default:
-            throw "Unknown action '" + action.type + "'";
+        //default:
+          //  throw "Unknown action '" + action.type + "'";
     }
 }
 
@@ -40,6 +40,7 @@ var store = Redux.createStore(myReducer, {
         value: 0,
         multiplier: 1
 });
+console.log("initial state:" + store.getState());
 
 function getElementById(id) {
     var elementById = window.document.getElementById(id);
@@ -80,6 +81,9 @@ window.onload = function () {
 
     store.subscribe( function(){
         var newState = store.getState();
+
+        if(newState == undefined) return;
+
         valueDiv.textContent = newState.value;
     } );
 }

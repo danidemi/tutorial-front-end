@@ -1,0 +1,7 @@
+{
+  "name": "tutorial-redux-3.7.2",
+  "version": "0.0.0",
+  "dependencies": {
+    "redux": "3.7.2"
+  }
+}
