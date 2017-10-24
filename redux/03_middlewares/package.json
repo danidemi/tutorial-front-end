@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "dependencies": {
     "redux": "3.7.2",
-    "redux-logger": "3.0.6"
+    "redux-logger": "3.0.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-filter": "^5.0.1",
+    "gulp-watch": "^4.3.11"
   }
 }
