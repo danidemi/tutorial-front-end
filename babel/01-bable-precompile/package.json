@@ -1,0 +1,7 @@
+{
+  "name": "00-babel-in-browser",
+  "version": "0.0.0",
+  "dependencies": {
+    "babel-standalone": "6.26.0"
+  }
+}
