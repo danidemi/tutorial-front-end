@@ -1,3 +1,5 @@
+'use strict';
+
 function getElementById(id) {
     var elementById = window.document.getElementById(id);
     if(elementById==null) {
@@ -56,6 +58,7 @@ window.onload = function () {
     var incMultBtn = getElementById('incrementMultiplier');
     var decMultBtn = getElementById('decrementMultiplier');
     var valueDiv = getElementById('value');
+    var multiplierDiv = getElementById('multiplier');
 
     incBtn.onclick = function() {
         store.dispatch( {type: 'INCREMENT'} );
@@ -79,6 +82,7 @@ window.onload = function () {
         if(newState == undefined) return;
 
         valueDiv.textContent = newState.value;
+        multiplierDiv.textContent = newState.multiplier;
     } );
 
     store.dispatch( {type: 'FORCE_UI_UPDATE'} );
