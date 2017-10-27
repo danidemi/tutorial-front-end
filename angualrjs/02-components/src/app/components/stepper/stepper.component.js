@@ -1,12 +1,10 @@
-import templateUrl from './stepper.html';
-
 export const StepperComponent = {
 
     bindings: {
 
     },
 
-    templateUrl,
+    templateUrl: "./stepper.html",
 
     controller: class StepperComponent {
 
