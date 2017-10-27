@@ -5,6 +5,7 @@ export const AppComponent = {
     </header>
     <div>
         <stepper></stepper>
+        <stepper></stepper>
     </div>
     <footer>
         Copyright MyApp 2016.

@@ -33,9 +33,12 @@ export const StepperComponent = {
         // This hook can be considered analogous to the ngAfterViewInit and ngAfterContentInit hooks in Angular.
         // Since the compilation process is rather different in AngularJS there is no direct mapping and care should be taken when upgrading.
 
-        constructor(EventEmitter) {
-            'ngInject';
-            this.EventEmitter = EventEmitter;
+        // constructor(EventEmitter) {
+        //     'ngInject';
+        //     this.EventEmitter = EventEmitter;
+        // }
+
+        constructor() {
         }
 
         // $onChanges(changesObj) - Called whenever one-way bindings are updated.
@@ -55,7 +58,6 @@ export const StepperComponent = {
 
         onDownClick() {
             console.log("onDownClick");
-            this.EventEmitter({action: "down"});
         }
 
     }
