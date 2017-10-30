@@ -57,15 +57,11 @@ export const StepperComponent = {
         // }
 
         myOnUpClick() {
-            console.log("myOnUpClick");
             this.onUpClick();
-            console.log(this);
         }
 
         myOnDownClick() {
-            console.log("myOnDownClick");
             this.onDownClick();
-            console.log(this);
         }
 
     }
