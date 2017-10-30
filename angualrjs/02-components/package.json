@@ -11,7 +11,8 @@
     "gulp": "3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-filter": "^5.0.1",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

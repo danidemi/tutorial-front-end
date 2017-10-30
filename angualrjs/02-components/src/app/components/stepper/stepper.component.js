@@ -1,7 +1,11 @@
+import {isFunction} from "lodash";
+
 export const StepperComponent = {
 
     bindings: {
-
+        valueToShow: '<',
+        onUpClick: '&',
+        onDownClick: '&'
     },
 
     templateUrl: "./stepper.html",
@@ -39,6 +43,7 @@ export const StepperComponent = {
         // }
 
         constructor() {
+            this.name = "Stepper";
         }
 
         // $onChanges(changesObj) - Called whenever one-way bindings are updated.
@@ -46,18 +51,21 @@ export const StepperComponent = {
         // and the values are an object of the form { currentValue, previousValue, isFirstChange() }.
         // Use this hook to trigger updates within a component such as cloning the bound value
         // to prevent accidental mutation of the outer value.
-        $onChanges(changes) {
-            console.log("onChanges:");
-            console.log(changes);
+        // $onChanges(changes) {
+        //     console.log("onChanges:");
+        //     console.log(changes);
+        // }
+
+        myOnUpClick() {
+            console.log("myOnUpClick");
+            this.onUpClick();
+            console.log(this);
         }
 
-        onUpClick() {
-            console.log("onUpClick");
-            //this.EventEmitter({action: "up"});
-        }
-
-        onDownClick() {
-            console.log("onDownClick");
+        myOnDownClick() {
+            console.log("myOnDownClick");
+            this.onDownClick();
+            console.log(this);
         }
 
     }
