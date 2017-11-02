@@ -1,3 +1,4 @@
+// objects as maps
 a = {
     // comment
     b: "c",
